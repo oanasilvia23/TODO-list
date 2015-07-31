@@ -1,0 +1,99 @@
+body{
+	background-image: url("http://orig13.deviantart.net/ed4c/f/2012/160/b/c/background_desk_wood_texture_objects_scratch_by_archibald_butler-d52wel3.jpg");
+	background-repeat: no-repeat;
+	background-size: -y gradient;
+	
+}
+
+.hard {
+    background-color : #FFFAFA;
+    outline: auto #DDD;
+}
+.hard-grey {
+    background-color : #E1E1E1;
+    outline: auto #DDD;
+}
+
+.pg {
+    background-image: url("../img/galben.png");
+    border-radius : 30px;
+    border: 1px solid grey;
+    
+}
+
+
+.no-bullets
+{
+	list-style-type: none;
+}
+
+.try
+{
+	padding: 50px;
+	
+}
+.make-scroll
+{
+	overflow: scroll;
+
+}
+
+.drag-pen
+{
+	position: absolute;
+	z-index:4;
+	left: 600px;
+	top: 8px;
+	
+}
+
+#droppable2
+{
+	position: absolute;
+	left: 500px;
+	top: 0px;
+	width: 600px;
+	height: 500px;
+	
+}
+
+#droppable
+{
+	position: absolute;
+	right: 50px;
+	top: 250px;
+	width: 600px;
+	height: 500px;
+	/*border-radius: 20px;
+	-webkit-animation: div-drop-anim 5s infinite;*/
+	
+	
+}
+/*
+@-webkit-keyframes div-drop-anim {
+    50% {box-shadow: 7px 7px 10px 10px #b52222;}
+}
+*/
+
+.case
+{
+	position: absolute;
+	z-index: 1;
+	left:442px;
+	top: -218px;
+}
+
+.post-drag
+{
+	position: absolute;
+	z-index: 1;
+	top:540px;
+	left:100px;
+}
+
+#flipbook
+{
+	z-index:3;
+	
+}
+

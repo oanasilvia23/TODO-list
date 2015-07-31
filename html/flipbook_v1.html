@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FlipBook</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!--<script src="../js/jquery.min.1.7.js"></script> -->
+    
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../js/turn.min.js"></script>
+    <script src="../js/tulvai.js"></script>
+    <script src="../js/controller.js"></script>
+    <link href="../css/flip_v1.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#flipbook").turn({
+                width: 1400,
+                height: 700,
+                autoCenter: true
+              
+            });
+
+      /*      $("#flipbook").bind("turning", function (event, page, view) {
+                alert("Turning the page to: " + page);
+            });
+      */
+        });
+    </script>
+
+	
+</head>
+
+<body  ng-app="ToDo">
+    <div class="container" ng-controller="ToDoCtrl">
+	    <div id="flipbook" style="margin-top: 30%; left: -130px !important; position: absolute !important; ">
+	    	<img class="hard" id="coperta11" src="../img/coperta1_TKW.png">
+	    	<img class="hard" id = "coperta12" src="../img/coperta2_TKW.png">
+	    	<div class="pg" id = "pg1">
+	    		<div class="try">
+		    		<h2>Done To-Do's</h2>
+		    		<br>
+		    		<div class="make-scroll">
+		    			<ul class="todo-list list-group" ng-repeat="todo in donetodos track by $index">
+						<li class="no-bullets list-group-item row">
+		          			<h4 class="col-xs-12 col-sm-6 col-md-10">{{ todo }}</h4>
+		          			<h4 class="text-center col-xs-6 col-md-2">To-Do finished!</h4>	
+		        		</li>
+					</ul>
+		    		</div>
+					
+				</div>
+
+	    	</div>
+	    	
+	    	<div class="pg" id="pg2">
+	    		<div class="try">
+		    		<h2> Pending To-Do's</h2>
+		    		<br>
+		    		<div class="make-scroll">
+		    			<ul class="todo-list list-group" ng-repeat="todo in todos track by $index">
+						<li class="no-bullets list-group-item row">
+		          			<h4 class="col-xs-12 col-sm-6 col-md-10">{{ todo }}</h4>
+		          			<button type = "button" class="bt bt-achieve col-xs-6 col-md-2 btn btn-success" ng-click="done(todo)">Done</button>
+		        		</li>
+					</ul>
+		    		</div>
+					
+				</div>
+	    	</div>
+	    	
+	    	<div class="pg" id="pg3">
+	    		<div class="try">
+		    		<h2> Add a new ToDo!</h2>
+		    		<br>
+		    		<form class="form-horizontal">
+						<div class="form-group">
+							<h4 class="col-sm-2 text-center">New To-Do</h4>
+							<div class="col-sm-10">
+		      					<input type="text" class="txt form-control" placeholder="Hit Enter when you're done" ng-model="newTodo" ng-keyup="add($event)" /> 
+		      					<!-- $=core service of the Angular framework -->
+		    				</div>
+						</div>
+					</form>
+				</div>
+	    	</div>
+	    	
+	    	<div class="pg" id="pg4">
+	    		<div class="try">
+	    			
+	    		</div>
+	    	</div>
+	    	
+	    	<img class="hard" id="coperta21" src="../img/coperta3_TKW.png">
+	    	<img class="hard" id="coperta22" src="../img/cover_end.png">
+	    	
+	    	
+	    </div>
+		
+		
+		<div class="div-drag" id = "droppable2" ></div>
+		
+		<img id="draggable" class = "drag-pen" src="../img/pen_write.png" width="430" height="269">
+		
+		<div class="div-drop" id = "droppable" ></div>
+		
+		<div class="case">
+			<img src="../img/case_open2.png" width="630" height="569">
+		</div>
+		
+		<div class="post-drag">
+			<img src="../img/start.png" width="430" height="430">
+		</div>
+		
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Login </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../js/controller.js"></script>
+	    <script src="../js/move_postit.js"></script>
+	    <script src="../js/mouseover_cursiv.js"></script>
+	    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="login2.css">*/-->
+	    <link rel="stylesheet" type="text/css" href="../css/login3.css">
+	    <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+	</head>
+	
+<body class="log3" ng-app="ToDo" ng-controller="ToDoCtrl">
+    <div class="full-notes">
+        <div class="tot-form-pin">
+
+            <div>
+                <img class="pin-image" src="../img/pushpin.png">
+            </div>
+
+            <form class="form-this">
+                <h1>Please sign in...</h1>
+                <table>
+                    <tr>
+                        <td width="150px">Username:</td>
+                        <td><input class="say" type="text" value="Your username" ng-model="username" /> </td>
+                    </tr>
+
+                    <tr>
+                        <td>Password:</td>
+                        <td> <input class="say" type="password" value="Your password" ng-model="password" /></td>
+                    </tr>
+                </table>
+
+                <br>
+                <br>
+                <div class="align-button">
+                    <button type="button" ng-click="login(username, password)"> Sign In</button>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="postits">
+            <div class="not-see-this1">
+                <img class="post-it1" src="../img/Post-it-note-transparent.png">
+            </div>
+
+            <div class="not-see-this2">
+                <img class="post-it2" src="../img/postit1.png">
+            </div>
+
+	        <div class="animate-text" > <!--style="font-family:'COCOMAT'"-->
+	            <canvas width="400px"></canvas>
+	        </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

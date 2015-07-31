@@ -1,0 +1,192 @@
+
+body {
+    background: url('../img/corky.png');
+    background-size: cover;
+    background-repeat: -y gradient;
+}
+form {
+	opacity: 0.95;
+	/*z-index: -1;*/
+    color: #777;
+    background: #f6f6f3;
+    /*box-shadow: 10px 10px 5px #888888;*/
+    box-shadow: 10px 10px 40px black;
+    margin: 150px auto;
+    position: relative;
+    width: 350px;
+    border: 1px solid #dfdfd3;
+    background-image: -webkit-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -webkit-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -webkit-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                                                   hsla(180,75%,50%,.1) 95%, hsla(180,75%,50%,.1) 100%);
+    background-image: -moz-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -moz-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -moz-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                                                   hsla(180,75%,50%,.1) 95%, hsla(180,75%,50%,.1) 100%);
+    background-image: radial-gradient(#d6d5d6 30%, transparent 20%),
+                      radial-gradient(#cfcfc3 38%, transparent 24%),
+                      linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                                                   hsla(180,75%,50%,.1) 95%, hsla(180,75%,50%,.1) 100%);
+    background-position: 4px 1px, 4px 0px, 50% 0px;
+    background-repeat: repeat-y,  repeat-y, repeat;
+    background-size: 30px 30px, 30px 30px, 30px 30px;
+    padding: 135px 48px 23px 80px;
+}
+form:after {
+    border-left: 2px solid hsla(0,95%,50%,.1);
+    border-right: 2px solid hsla(0,95%,50%,.1);
+    bottom: 0;
+    content: '';
+    left: 60px;
+    position: absolute;
+    top: 0;
+    width: 3px;
+}
+
+
+form:hover
+{
+	/*z-index: 4;*/
+	opacity: 10;
+	transition: z-index 0.1s step-start, opacity 0.3s linear;
+}
+
+
+.align-button 
+{
+	text-align: center;
+}
+
+
+form button {
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  font-family: 'Loved by the King', cursive;
+  color: #b52222;
+  font-size: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  
+}
+
+form button:hover {
+  /*background: #f5e593;*/
+  -webkit-animation: sign-in-hover 5s infinite;
+  color: #777;
+  text-decoration: none;
+}
+
+@-webkit-keyframes sign-in-hover {
+    50% {box-shadow: 5px 5px 5px #b52222;}
+}
+
+form button:focus
+{
+	border: none;
+}
+
+
+form td {
+    font: italic 26px/30px 'Loved by the King', cursive;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+form h1 {
+    font: italic 30px/30px 'Loved by the King', cursive;
+}
+
+.say {
+background: transparent;
+border: 0px;
+outline: 0;
+border-bottom: dotted skyBlue;
+width: 200px;
+font: 25px/30px serif;
+font-family: 'Loved by the King', cursive;
+resize: none;
+}
+
+.full-notes
+{
+	position: relative;
+	text-align:center;
+	padding-top: 7%;
+}
+
+.pin-image
+{
+	position:absolute;
+	z-index: 5;
+}
+
+.tot-form-pin
+{
+	/*position:absolute;*/
+	/*text-align: center;*/
+	opacity: 1;
+    z-index: 1;
+    
+}
+
+
+.post-it1
+{
+	position: absolute;
+	z-index:2;
+	-webkit-transform: rotate(-40deg); /* Chrome, Safari, Opera */
+    transform: rotate(-40deg);
+    margin-top: -550px;
+    right: 50%;
+}
+    /*
+    -webkit-animation: mymoveright 5s infinite; 
+    animation: mymoveright 5s infinite;
+	
+    
+}
+
+@-webkit-keyframes mymoveright {
+    75% {right: 60%;}
+}
+*/
+.post-it2
+{
+	position:absolute;
+	z-index:3;
+	left: 50%;
+	margin-top:-500px;
+    
+}
+
+.animate-text
+{
+	position: absolute;
+	z-index:2;
+	-webkit-transform: rotate(-40deg); 
+    transform: rotate(-40deg);
+    margin-top: -365px;
+    right: 55%; 
+}
+/*
+	-webkit-animation: mymoveleft 5s infinite; 
+    animation: mymoveleft 5s infinite;
+	
+}
+
+@-webkit-keyframes mymoveleft {
+    75% {left: 60%;}
+}
+
+*/
+.div-for-form
+{
+	box-shadow: 10px 10px 5px #888888;
+}
+
+
+
